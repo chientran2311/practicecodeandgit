@@ -1,5 +1,6 @@
 <?php include_once "layouts/default.php"; ?>
 <div class="container mt-5 mb-3">
+        <a name="" id="" class="btn btn-primary mt-3 mb-5" href="web.php?controller=property&action=insert" role="button">ADD NEW PROPERTY</a>    
     <div class="table-responsive-lg">
         <table class="table table-light">
             <thead>
@@ -24,8 +25,10 @@
                     <td scope="row"><?=$property['Price'] ?></td>
                     <td scope="row"><?=$property['AgentId'] ?></td>
                     <td scope="row">
-                        <a href="web.php?controller=property&action=edit&id=<?=$property['PropertyId'] ?>" class="btn btn-success">Edit</a>
-                        <a href="web.php?controller=property&action=edit&id=<?=$property['PropertyId'] ?>" class="btn btn-danger">Delete</a>
+                        <a href="web.php?controller=property&action=edit&id=<?=$property['PropertyId'] ?>"
+                            class="btn btn-success">Edit</a>
+                        <a href="web.php?controller=property&action=delete&id=<?=$property['PropertyId'] ?>"
+                            class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php  } 
